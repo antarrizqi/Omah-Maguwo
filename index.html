@@ -1,66 +1,112 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Omah maguwo Jogja</title>
+    <!-- Tambahan Google Font Plus Jakarta Sans biar tipografi web keliatan modern & elegan -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Plus Jakarta Sans", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
   </head>
-  <body>
-    <section class="text-gray-600 body-font">
+  <body class="bg-amber-50/30 text-gray-700 antialiased font-sans">
+    <!-- HERO SECTION -->
+    <section
+      class="relative overflow-hidden bg-gradient-to-b from-emerald-50/60 to-transparent"
+    >
+      <!-- Aksen Estetik Latar Belakang -->
       <div
-        class="container mx-auto flex px-5 py-20 items-center justify-center flex-col"
+        class="absolute top-0 right-0 -z-10 w-72 h-72 bg-emerald-100/40 rounded-full blur-3xl"
+      ></div>
+
+      <div
+        class="container mx-auto flex px-6 py-20 items-center justify-center flex-col"
       >
-        <img
-          class="lg:w-2/6 md:w-3/6 w-[80%] mb-10 object-cover object-center rounded"
-          alt="hero"
-          src="logo.jpg"
-        />
-        <div class="text-center lg:w-2/3 w-full">
+        <!-- Logo Container -->
+        <div
+          class="mb-8 p-2 bg-white rounded-2xl shadow-md border border-emerald-100/50"
+        >
+          <img
+            class="max-w-[150px] sm:max-w-[180px] h-auto object-cover rounded-xl"
+            alt="hero"
+            src="logo.jpg"
+          />
+        </div>
+
+        <div class="text-center max-w-3xl w-full">
+          <!-- Judul Utama -->
           <h1
-            class="title-font sm:text-4xl text-3xl mb-4 text-gray-900 font-bold"
+            class="text-3xl sm:text-5xl mb-4 text-emerald-900 font-extrabold tracking-tight leading-tight"
           >
             Homestay Nyaman di Tengah Alam Jogja
           </h1>
-          <p className="text-xl md:text-2xl font-semibold mb-8 opacity-90">
+
+          <!-- Sub-headline (Fix dari className ke class) -->
+          <p
+            class="text-lg sm:text-xl font-medium mb-10 text-emerald-800/80 max-w-2xl mx-auto"
+          >
             15 Menit ke Candi prambanan • WiFi Cepat • Harga Mulai 150rb/Malam
           </p>
+
+          <!-- Tombol CTA Pesan -->
           <a
             href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20booking%20homestay"
+            class="inline-flex items-center gap-3 px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-lg rounded-full shadow-lg shadow-emerald-600/20 transition-all duration-300 hover:-translate-y-0.5 group"
           >
-            <button
-              class="mt-5 p-2 px-6 bg-green-500 font-semibold text-2xl text-white"
-            >
-              Pesan sekarang
-            </button>
+            <!-- Custom WhatsApp Icon SVG -->
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.488 1.451 5.419 1.452 5.374 0 9.748-4.322 9.752-9.643.002-2.578-1.002-5-2.822-6.822-1.821-1.82-4.246-2.823-6.83-2.823-5.377 0-9.751 4.321-9.756 9.643-.001 1.97.512 3.894 1.483 5.588l-.98 3.578 3.684-.967z"
+              />
+            </svg>
+            Pesan sekarang
           </a>
         </div>
       </div>
-      
     </section>
 
-    <!-- kunggulan kami -->
-    <section class="bg-white py-16 px-6 md:px-12 lg:px-24">
+    <!-- KEUNGGULAN KAMI -->
+    <section
+      class="bg-white py-20 px-6 md:px-12 lg:px-24 border-y border-stone-100"
+    >
       <div class="max-w-6xl mx-auto">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-800">
+        <div class="text-center mb-16">
+          <span
+            class="text-xs font-bold uppercase tracking-widest text-amber-600 bg-amber-50 px-3 py-1.5 rounded-full border border-amber-200/60"
+            >Kelebihan Homestay omah maguwo</span
+          >
+          <h2 class="text-3xl md:text-4xl font-bold text-stone-800 mt-3">
             Kenapa Pilih Kami?
           </h2>
-          <p class="text-gray-500 mt-2 text-lg">
+          <p class="text-stone-500 mt-3 text-lg max-w-lg mx-auto">
             Fasilitas lengkap. Suasana nyaman. Harga bersahabat.
           </p>
         </div>
 
         <div
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 justify-center items-center"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch"
         >
           <!-- Fasilitas 1 -->
           <div
-            class="flex flex-col items-center text-center bg-gray-50 p-6 rounded-2xl shadow hover:shadow-lg transition-all duration-300"
+            class="flex flex-col items-center text-center bg-stone-50/60 p-6 rounded-2xl border border-stone-100 hover:border-emerald-200 hover:bg-white shadow-sm hover:shadow-md transition-all duration-300"
           >
             <div
-              class="w-14 h-14 flex items-center justify-center rounded-full bg-green-100 text-green-600 mb-4"
+              class="w-14 h-14 flex items-center justify-center rounded-2xl bg-emerald-50 text-emerald-600 mb-5 border border-emerald-100"
             >
               <!-- Icon: Wifi -->
               <svg
@@ -77,18 +123,18 @@
                 />
               </svg>
             </div>
-            <h4 class="font-semibold text-gray-800 text-lg">Free Wifi</h4>
-            <p class="text-gray-500 text-sm mt-2">
+            <h4 class="font-bold text-stone-800 text-lg">Free Wifi</h4>
+            <p class="text-stone-500 text-sm mt-2 leading-relaxed">
               Stabil untuk kerja remote, Netflix, dan nge game.
             </p>
           </div>
 
           <!-- Fasilitas 2 -->
           <div
-            class="flex flex-col items-center text-center bg-gray-50 p-6 rounded-2xl shadow hover:shadow-lg transition-all duration-300"
+            class="flex flex-col items-center text-center bg-stone-50/60 p-6 rounded-2xl border border-stone-100 hover:border-amber-200 hover:bg-white shadow-sm hover:shadow-md transition-all duration-300"
           >
             <div
-              class="w-14 h-14 flex items-center justify-center rounded-full bg-yellow-100 text-yellow-600 mb-4"
+              class="w-14 h-14 flex items-center justify-center rounded-2xl bg-amber-50 text-amber-600 mb-5 border border-amber-100"
             >
               <!-- Icon: Coffee / Breakfast -->
               <svg
@@ -105,18 +151,18 @@
                 />
               </svg>
             </div>
-            <h4 class="font-semibold text-gray-800 text-lg">Sarapan Otentik</h4>
-            <p class="text-gray-500 text-sm mt-2">
+            <h4 class="font-bold text-stone-800 text-lg">Sarapan Otentik</h4>
+            <p class="text-stone-500 text-sm mt-2 leading-relaxed">
               Nasi goreng, teh manis hangat, dan menu baru tiap pagi.
             </p>
           </div>
 
           <!-- Fasilitas 3 -->
           <div
-            class="flex flex-col items-center text-center bg-gray-50 p-6 rounded-2xl shadow hover:shadow-lg transition-all duration-300"
+            class="flex flex-col items-center text-center bg-stone-50/60 p-6 rounded-2xl border border-stone-100 hover:border-blue-200 hover:bg-white shadow-sm hover:shadow-md transition-all duration-300"
           >
             <div
-              class="w-14 h-14 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 mb-4"
+              class="w-14 h-14 flex items-center justify-center rounded-2xl bg-blue-50 text-blue-600 mb-5 border border-blue-100"
             >
               <!-- Icon: Location -->
               <svg
@@ -133,20 +179,18 @@
                 />
               </svg>
             </div>
-            <h4 class="font-semibold text-gray-800 text-lg">
-              Lokasi Strategis
-            </h4>
-            <p class="text-gray-500 text-sm mt-2">
+            <h4 class="font-bold text-stone-800 text-lg">Lokasi Strategis</h4>
+            <p class="text-stone-500 text-sm mt-2 leading-relaxed">
               Dekat stasiun, kuliner malam, dan spot Instagramable.
             </p>
           </div>
 
           <!-- Fasilitas 5 -->
           <div
-            class="flex flex-col items-center text-center bg-gray-50 p-6 rounded-2xl shadow hover:shadow-lg transition-all duration-300"
+            class="flex flex-col items-center text-center bg-stone-50/60 p-6 rounded-2xl border border-stone-100 hover:border-purple-200 hover:bg-white shadow-sm hover:shadow-md transition-all duration-300"
           >
             <div
-              class="w-14 h-14 flex items-center justify-center rounded-full bg-purple-100 text-purple-600 mb-4"
+              class="w-14 h-14 flex items-center justify-center rounded-2xl bg-purple-50 text-purple-600 mb-5 border border-purple-100"
             >
               <!-- Icon: Kitchen -->
               <svg
@@ -163,57 +207,107 @@
                 />
               </svg>
             </div>
-            <h4 class="font-semibold text-gray-800 text-lg">Dapur Bersama</h4>
-            <p class="text-gray-500 text-sm mt-2">
+            <h4 class="font-bold text-stone-800 text-lg">Dapur Bersama</h4>
+            <p class="text-stone-500 text-sm mt-2 leading-relaxed">
               Masak santai, alat lengkap,
             </p>
           </div>
         </div>
       </div>
     </section>
-    
-    <!-- galeri foto -->
-    <section class="w-full h-full items-center flex justify-center ">
-      <img class="md:" src="Frame 33808 (1).png" alt="">
+
+    <!-- GALERI FOTO -->
+    <section class="py-16 bg-stone-50/40 px-6">
+      <div class="max-w-5xl mx-auto flex justify-center">
+        <div
+          class="overflow-hidden rounded-2xl shadow-xl shadow-stone-200 border border-stone-200/60 bg-white p-2"
+        >
+          <img
+            class="w-full h-auto object-cover rounded-xl"
+            src="Frame 33808 (1).png"
+            alt="Galeri Omah Maguwo"
+          />
+        </div>
+      </div>
     </section>
 
-    <!-- testimoni -->
-    <section class="mt-7 bg-gray-50 py-12">
-      <div class="max-w-4xl mx-auto px-4 text-center">
-        <h2 class="text-2xl font-bold mb-6">Testimoni dari tamu kami</h2>
-        <div class="grid md:grid-cols-3 gap-6">
-          <div class="bg-white p-6 rounded-lg shadow">
-            <p class="text-sm italic">
+    <!-- TESTIMONI -->
+    <section class="bg-white py-16 border-t border-stone-100">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <h2 class="text-2xl sm:text-3xl font-bold mb-10 text-stone-800">
+          Testimoni dari tamu kami
+        </h2>
+        <div class="grid md:grid-cols-3 gap-6 text-left">
+          <div
+            class="bg-stone-50/80 p-6 rounded-2xl border border-stone-100 relative"
+          >
+            <span
+              class="absolute top-4 right-6 text-4xl text-amber-200/60 font-serif"
+              >“</span
+            >
+            <p
+              class="text-stone-600 text-sm italic leading-relaxed relative z-10"
+            >
               “Penginapannya bersih dan nyaman banget! .”
             </p>
-            <p class="mt-4 font-bold">— Raka, Jakarta</p>
+            <p class="mt-4 font-bold text-emerald-950 text-sm">
+              — Raka, Jakarta
+            </p>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow">
-            <p class="text-sm italic">
+
+          <div
+            class="bg-stone-50/80 p-6 rounded-2xl border border-stone-100 relative"
+          >
+            <span
+              class="absolute top-4 right-6 text-4xl text-amber-200/60 font-serif"
+              >“</span
+            >
+            <p
+              class="text-stone-600 text-sm italic leading-relaxed relative z-10"
+            >
               “Suka banget sama suasananya yang tenang dan asri. Pas lah pokok
               nya!”
             </p>
-            <p class="mt-4 font-bold">— Dimas, jakarta</p>
+            <p class="mt-4 font-bold text-emerald-950 text-sm">
+              — Dimas, jakarta
+            </p>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow">
-            <p class="text-sm italic">
+
+          <div
+            class="bg-stone-50/80 p-6 rounded-2xl border border-stone-100 relative"
+          >
+            <span
+              class="absolute top-4 right-6 text-4xl text-amber-200/60 font-serif"
+              >“</span
+            >
+            <p
+              class="text-stone-600 text-sm italic leading-relaxed relative z-10"
+            >
               “Fasilitas lengkap. AC dingin, air panas lancar, dapur juga
               bersih.”
             </p>
-            <p class="mt-4 font-bold">— thania, jakarta</p>
+            <p class="mt-4 font-bold text-emerald-950 text-sm">
+              — thania, jakarta
+            </p>
           </div>
         </div>
       </div>
     </section>
-    <!-- lokasi -->
-    <section class="bg-white py-12">
-      <div class="max-w-5xl mx-auto px-4">
-        <h2 class="text-2xl font-bold text-center mb-6">Lokasi Kami</h2>
-        <div class="aspect-video rounded-lg overflow-hidden shadow">
+
+    <!-- LOKASI -->
+    <section class="bg-stone-50/50 py-16 border-t border-stone-100">
+      <div class="max-w-4xl mx-auto px-6">
+        <h2
+          class="text-2xl sm:text-3xl font-bold text-center mb-8 text-stone-800"
+        >
+          Lokasi Kami
+        </h2>
+        <div
+          class="aspect-video w-full rounded-2xl overflow-hidden shadow-lg border border-stone-200/40 bg-white"
+        >
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253005.1069853438!2d110.12201029453128!3d-7.768094699999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5b001200e69b%3A0x755cf33ef8a7ecb6!2sOmah%20Maguwo%20Jogja!5e0!3m2!1sid!2sid!4v1752734116864!5m2!1sid!2sid"
-            width="1000"
-            height="450"
+            class="w-full h-full"
             style="border: 0"
             allowfullscreen=""
             loading="lazy"
@@ -222,20 +316,31 @@
         </div>
       </div>
     </section>
-    <!-- cta -->
-    <section class="bg-yellow-500 py-12">
-      <div class="max-w-3xl mx-auto px-4 text-center text-white">
-        <h2 class="text-3xl font-bold mb-4">Siap Liburan? Booking Sekarang!</h2>
-        <p class="mb-6">
+
+    <!-- CTA FOOTER -->
+    <section
+      class="bg-gradient-to-r from-emerald-800 to-emerald-900 py-16 relative overflow-hidden text-center"
+    >
+      <!-- Motif Aksen Emas Tipis Khas Jawa -->
+      <div
+        class="absolute inset-0 opacity-5 mix-blend-overlay bg-[radial-gradient(#f59e0b_1px,transparent_1px)] [background-size:16px_16px]"
+      ></div>
+
+      <div class="max-w-2xl mx-auto px-6 text-white relative z-10">
+        <h2 class="text-3xl font-extrabold mb-4 tracking-tight">
+          Siap Liburan? Booking Sekarang!
+        </h2>
+        <p class="mb-8 text-emerald-100/80 leading-relaxed">
           Dapatkan pengalaman menginap yang tenang, nyaman, dan terjangkau hanya
           di homestay kami.
         </p>
 
         <a
           href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20booking%20homestay"
-          class="inline-block bg-white text-yellow-600 font-semibold py-3 px-6 rounded-full shadow hover:bg-yellow-100 transition"
-          >Pesan Sekarang</a
+          class="inline-block bg-amber-500 hover:bg-amber-400 text-emerald-950 font-bold py-4 px-8 rounded-full shadow-lg shadow-amber-950/20 transition-all duration-300 hover:scale-105"
         >
+          Pesan Sekarang
+        </a>
       </div>
     </section>
   </body>
