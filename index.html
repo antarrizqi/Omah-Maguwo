@@ -1,9 +1,45 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Omah maguwo Jogja</title>
+    <meta name="google-site-verification" content="8SNARJFvm6WaybKyQbFTHF3iPOYR-tbrxszsVWgL0yg" />
+
+    <!-- Title tag: keep concise, keyword-first, brand last -->
+    <title>
+      Omah Maguwo Jogja – Homestay Dekat Stasiun & Bandara, Mulai 150rb
+    </title>
+
+    <!-- Meta description: this is what shows in Google's search results -->
+    <meta
+      name="description"
+      content="Omah Maguwo Jogja homestay dekat Stasiun Maguwo dan Bandara Adisutjipto. Harga mulai 150rb/malam, WiFi cepat, sarapan khas Jogja, dan lokasi strategis di Sleman."
+    />
+
+    <!-- TODO: replace with your real domain once you move off vercel.app -->
+    <link rel="canonical" href="https://omah-maguwo.vercel.app/" />
+
+    <!-- TODO: add a real favicon file and update this path -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <!-- Open Graph tags: controls how the page looks when shared on Instagram/TikTok/Facebook/WhatsApp -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Omah Maguwo Jogja – Homestay Dekat Stasiun & Bandara"
+    />
+    <meta
+      property="og:description"
+      content="Omah Maguwo Jogja homestay dekat Stasiun Maguwo & Bandara Adisutjipto. Akomodasi nyaman, sarapan khas Jogja, dan mudah dijangkau dari Candi Prambanan."
+    />
+    <meta
+      property="og:image"
+      content="https://omah-maguwo.vercel.app/kamar.png"
+    />
+    <meta property="og:site_name" content="Omah Maguwo Jogja" />
+    <meta property="og:url" content="https://omah-maguwo.vercel.app/" />
+    <meta property="og:locale" content="id_ID" />
+
     <!-- Tambahan Google Font Plus Jakarta Sans biar tipografi web keliatan modern & elegan -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,18 +47,46 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ["Plus Jakarta Sans", "sans-serif"],
-            },
-          },
+    <link rel="stylesheet" href="./output.css" />
+
+    <!-- LodgingBusiness structured data — lets Google show price/location rich results -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LodgingBusiness",
+        "name": "Omah Maguwo Jogja",
+        "image": "https://omah-maguwo.vercel.app/kamar.png",
+        "url": "https://omah-maguwo.vercel.app/",
+        "priceRange": "Rp150.000+",
+        "telephone": "+6281311240188",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Jl. Nangka VII, Sanggrahan, Maguwoharjo",
+          "addressLocality": "Depok, Sleman",
+          "addressRegion": "DI Yogyakarta",
+          "postalCode": "55281",
+          "addressCountry": "ID"
         },
-      };
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -7.7680947,
+          "longitude": 110.1220103
+        }
+      }
     </script>
+
+    <!--
+      TODO: add Google Analytics 4 to track WhatsApp click conversions.
+      Get your Measurement ID from analytics.google.com, then uncomment and fill in below.
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXX');
+      </script>
+    -->
   </head>
   <body class="bg-amber-50/30 text-gray-700 antialiased font-sans">
     <!-- HERO SECTION -->
@@ -41,10 +105,17 @@
         <div
           class="mb-8 p-2 bg-white rounded-2xl shadow-md border border-emerald-100/50"
         >
+          <!--
+            TODO: add real width/height attributes matching the actual file's pixel dimensions
+            (prevents layout shift / CLS). This is likely your LCP element, so it loads eager + high priority.
+          -->
           <img
             class="max-w-[150px] sm:max-w-[180px] h-auto object-cover rounded-xl"
-            alt="hero"
+            alt="Logo Omah Maguwo Jogja, homestay dekat Stasiun Maguwo Yogyakarta"
             src="logo.jpg"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
           />
         </div>
 
@@ -56,20 +127,24 @@
             Homestay Nyaman di Tengah Alam Jogja
           </h1>
 
-          <!-- Sub-headline (Fix dari className ke class) -->
+          <!-- Sub-headline -->
           <p
             class="text-lg sm:text-xl font-medium mb-10 text-emerald-800/80 max-w-2xl mx-auto"
           >
-            15 Menit ke Candi prambanan • WiFi Cepat • Harga Mulai 150rb/Malam
+            15 Menit ke Candi Prambanan • WiFi Cepat • Harga Mulai 150rb/Malam
           </p>
 
           <!-- Tombol CTA Pesan -->
           <a
-            href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20booking%20homestay"
+            href="https://wa.me/6281311240188?text=Halo,%20saya%20ingin%20booking%20homestay"
             class="inline-flex items-center gap-3 px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-lg rounded-full shadow-lg shadow-emerald-600/20 transition-all duration-300 hover:-translate-y-0.5 group"
           >
             <!-- Custom WhatsApp Icon SVG -->
-            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+            <svg
+              class="w-6 h-6 fill-current"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
               <path
                 d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.488 1.451 5.419 1.452 5.374 0 9.748-4.322 9.752-9.643.002-2.578-1.002-5-2.822-6.822-1.821-1.82-4.246-2.823-6.83-2.823-5.377 0-9.751 4.321-9.756 9.643-.001 1.97.512 3.894 1.483 5.588l-.98 3.578 3.684-.967z"
               />
@@ -88,7 +163,7 @@
         <div class="text-center mb-16">
           <span
             class="text-xs font-bold uppercase tracking-widest text-amber-600 bg-amber-50 px-3 py-1.5 rounded-full border border-amber-200/60"
-            >Kelebihan Homestay omah maguwo</span
+            >Kelebihan Homestay Omah Maguwo</span
           >
           <h2 class="text-3xl md:text-4xl font-bold text-stone-800 mt-3">
             Kenapa Pilih Kami?
@@ -115,6 +190,7 @@
                 stroke="currentColor"
                 stroke-width="2"
                 viewBox="0 0 24 24"
+                aria-hidden="true"
               >
                 <path
                   stroke-linecap="round"
@@ -123,7 +199,8 @@
                 />
               </svg>
             </div>
-            <h4 class="font-bold text-stone-800 text-lg">Free Wifi</h4>
+            <!-- Fixed: was h4 skipping h3, broke heading hierarchy -->
+            <h3 class="font-bold text-stone-800 text-lg">Free Wifi</h3>
             <p class="text-stone-500 text-sm mt-2 leading-relaxed">
               Stabil untuk kerja remote, Netflix, dan nge game.
             </p>
@@ -143,6 +220,7 @@
                 stroke="currentColor"
                 stroke-width="2"
                 viewBox="0 0 24 24"
+                aria-hidden="true"
               >
                 <path
                   stroke-linecap="round"
@@ -151,7 +229,7 @@
                 />
               </svg>
             </div>
-            <h4 class="font-bold text-stone-800 text-lg">Sarapan Otentik</h4>
+            <h3 class="font-bold text-stone-800 text-lg">Sarapan Otentik</h3>
             <p class="text-stone-500 text-sm mt-2 leading-relaxed">
               Nasi goreng, teh manis hangat, dan menu baru tiap pagi.
             </p>
@@ -171,6 +249,7 @@
                 stroke="currentColor"
                 stroke-width="2"
                 viewBox="0 0 24 24"
+                aria-hidden="true"
               >
                 <path
                   stroke-linecap="round"
@@ -179,13 +258,13 @@
                 />
               </svg>
             </div>
-            <h4 class="font-bold text-stone-800 text-lg">Lokasi Strategis</h4>
+            <h3 class="font-bold text-stone-800 text-lg">Lokasi Strategis</h3>
             <p class="text-stone-500 text-sm mt-2 leading-relaxed">
               Dekat stasiun, kuliner malam, dan spot Instagramable.
             </p>
           </div>
 
-          <!-- Fasilitas 5 -->
+          <!-- Fasilitas 4 -->
           <div
             class="flex flex-col items-center text-center bg-stone-50/60 p-6 rounded-2xl border border-stone-100 hover:border-purple-200 hover:bg-white shadow-sm hover:shadow-md transition-all duration-300"
           >
@@ -199,6 +278,7 @@
                 stroke="currentColor"
                 stroke-width="2"
                 viewBox="0 0 24 24"
+                aria-hidden="true"
               >
                 <path
                   stroke-linecap="round"
@@ -207,9 +287,9 @@
                 />
               </svg>
             </div>
-            <h4 class="font-bold text-stone-800 text-lg">Dapur Bersama</h4>
+            <h3 class="font-bold text-stone-800 text-lg">Dapur Bersama</h3>
             <p class="text-stone-500 text-sm mt-2 leading-relaxed">
-              Masak santai, alat lengkap,
+              Masak santai, alat lengkap.
             </p>
           </div>
         </div>
@@ -224,18 +304,26 @@
         >
           <img
             class="w-full h-auto object-cover rounded-xl"
-            src="Frame 33808 (1).png"
-            alt="Galeri Omah Maguwo"
+            src="kamar.png"
+            alt="Galeri kamar dan fasilitas Omah Maguwo Jogja, homestay dekat Stasiun Maguwo"
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </div>
     </section>
 
     <!-- TESTIMONI -->
+    <!--
+      TODO (flagged in audit): these are static, unverifiable quotes with no link to a real
+      review source. Best practice is embedding your actual Google Business Profile reviews
+      instead. Do NOT add Review/AggregateRating schema to these unless they're sourced from
+      a verifiable platform — fake review schema violates Google's structured data policies.
+    -->
     <section class="bg-white py-16 border-t border-stone-100">
       <div class="max-w-5xl mx-auto px-6 text-center">
         <h2 class="text-2xl sm:text-3xl font-bold mb-10 text-stone-800">
-          Testimoni dari tamu kami
+          Testimoni dari Tamu Kami
         </h2>
         <div class="grid md:grid-cols-3 gap-6 text-left">
           <div
@@ -243,12 +331,12 @@
           >
             <span
               class="absolute top-4 right-6 text-4xl text-amber-200/60 font-serif"
-              >“</span
+              >&ldquo;</span
             >
             <p
               class="text-stone-600 text-sm italic leading-relaxed relative z-10"
             >
-              “Penginapannya bersih dan nyaman banget! .”
+              &ldquo;Penginapannya bersih dan nyaman banget!&rdquo;
             </p>
             <p class="mt-4 font-bold text-emerald-950 text-sm">
               — Raka, Jakarta
@@ -260,16 +348,16 @@
           >
             <span
               class="absolute top-4 right-6 text-4xl text-amber-200/60 font-serif"
-              >“</span
+              >&ldquo;</span
             >
             <p
               class="text-stone-600 text-sm italic leading-relaxed relative z-10"
             >
-              “Suka banget sama suasananya yang tenang dan asri. Pas lah pokok
-              nya!”
+              &ldquo;Suka banget sama suasananya yang tenang dan asri. Pas lah
+              pokoknya!&rdquo;
             </p>
             <p class="mt-4 font-bold text-emerald-950 text-sm">
-              — Dimas, jakarta
+              — Dimas, Jakarta
             </p>
           </div>
 
@@ -278,16 +366,16 @@
           >
             <span
               class="absolute top-4 right-6 text-4xl text-amber-200/60 font-serif"
-              >“</span
+              >&ldquo;</span
             >
             <p
               class="text-stone-600 text-sm italic leading-relaxed relative z-10"
             >
-              “Fasilitas lengkap. AC dingin, air panas lancar, dapur juga
-              bersih.”
+              &ldquo;Fasilitas lengkap. AC dingin, air panas lancar, dapur juga
+              bersih.&rdquo;
             </p>
             <p class="mt-4 font-bold text-emerald-950 text-sm">
-              — thania, jakarta
+              — Thania, Jakarta
             </p>
           </div>
         </div>
@@ -302,10 +390,33 @@
         >
           Lokasi Kami
         </h2>
+
+        <!--
+          Added: visible, crawlable NAP (Name-Address-Phone) text. Previously the only location
+          data existed inside the map iframe's src URL, which is not readable as text by
+          Google or by users who can't/don't load the embed.
+        -->
+        <div class="text-center mb-8 text-stone-600">
+          <p class="font-semibold text-stone-800">Omah Maguwo Jogja</p>
+          <p>
+            Jl. Nangka VII, Sanggrahan, Maguwoharjo, Depok, Sleman, DI
+            Yogyakarta
+          </p>
+          <p>
+            Telepon/WhatsApp:
+            <a
+              href="tel:+6281311240188"
+              class="text-emerald-700 hover:underline"
+              >+62 813-1124-0188</a
+            >
+          </p>
+        </div>
+
         <div
           class="aspect-video w-full rounded-2xl overflow-hidden shadow-lg border border-stone-200/40 bg-white"
         >
           <iframe
+            title="Lokasi Omah Maguwo Jogja di Google Maps"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253005.1069853438!2d110.12201029453128!3d-7.768094699999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5b001200e69b%3A0x755cf33ef8a7ecb6!2sOmah%20Maguwo%20Jogja!5e0!3m2!1sid!2sid!4v1752734116864!5m2!1sid!2sid"
             class="w-full h-full"
             style="border: 0"
@@ -324,6 +435,7 @@
       <!-- Motif Aksen Emas Tipis Khas Jawa -->
       <div
         class="absolute inset-0 opacity-5 mix-blend-overlay bg-[radial-gradient(#f59e0b_1px,transparent_1px)] [background-size:16px_16px]"
+        aria-hidden="true"
       ></div>
 
       <div class="max-w-2xl mx-auto px-6 text-white relative z-10">
@@ -336,7 +448,7 @@
         </p>
 
         <a
-          href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20booking%20homestay"
+          href="https://wa.me/6281311240188?text=Halo,%20saya%20ingin%20booking%20homestay"
           class="inline-block bg-amber-500 hover:bg-amber-400 text-emerald-950 font-bold py-4 px-8 rounded-full shadow-lg shadow-amber-950/20 transition-all duration-300 hover:scale-105"
         >
           Pesan Sekarang
